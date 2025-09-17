@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Heart Attack Prediction Form</title>
+</head>
+<body>
+    <h1>Heart Attack Risk Prediction</h1>
+    <form action="/predict" method="post">
+
+        Age:<br>
+        <input type="number" name="age" required><br><br>
+
+        Sex:<br>
+        <select name="sex" required>
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+        </select><br><br>
+
+        Chest Pain Type:<br>
+        <select name="cp" required>
+            <option value="0">Typical Angina</option>
+            <option value="1">Atypical Angina</option>
+            <option value="2">Non-anginal Pain</option>
+            <option value="3">Asymptomatic</option>
+        </select><br><br>
+
+        Resting Blood Pressure:<br>
+        <input type="number" name="trestbps" required><br><br>
+
+        Serum Cholesterol:<br>
+        <input type="number" name="chol" required><br><br>
+
+        Fasting Blood Sugar:<br>
+        <select name="fbs" required>
+            <option value="0">≤ 120 mg/dL</option>
+            <option value="1">> 120 mg/dL</option>
+        </select><br><br>
+
+        Resting ECG:<br>
+        <select name="restecg" required>
+            <option value="0">Normal</option>
+            <option value="1">Abnormality</option>
+            <option value="2">Hypertrophy</option>
+        </select><br><br>
+
+        Maximum Heart Rate Achieved:<br>
+        <input type="number" name="thalach" required><br><br>
+
+        Exercise-Induced Angina:<br>
+        <select name="exang" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        Oldpeak (ST Depression):<br>
+        <input type="number" step="0.1" name="oldpeak" required><br><br>
+
+        Slope of Peak Exercise ST Segment:<br>
+        <select name="slope" required>
+            <option value="0">Upsloping</option>
+            <option value="1">Flat</option>
+            <option value="2">Downsloping</option>
+        </select><br><br>
+
+        Number of Major Vessels:<br>
+        <input type="number" name="ca" min="0" max="3" required><br><br>
+
+        Thalassemia:<br>
+        <select name="thal" required>
+            <option value="1">Normal</option>
+            <option value="2">Fixed Defect</option>
+            <option value="3">Reversible Defect</option>
+            <option value="0">Missing</option>
+        </select><br><br>
+
+        <button type='submit'>Predict </button>
+    </form>
+</body>
+</html>
